@@ -1,16 +1,28 @@
 var mysql = require("mysql");
 
 // for local testing
-var connection = mysql.createConnection({
-  host: "localhost",
-  port: 3306,
-  user: "root",
-  password: "password",
-  database: "moviesdb"
-});
+// var connection = mysql.createConnection({
+//   host: "localhost",
+//   port: 3306,
+//   user: "root",
+//   password: "password",
+//   database: "moviesdb"
+// });
 
 // for Heroku
 // var connection = mysql.createConnection(process.env.JAWSDB_URL);
+
+if (process.env.JAWSDB_URL) {
+  var connection = mysql.createConnection(process.env.JAWSDB_URL);
+} else {
+  var connection = mysql.createConnection({
+    host: "localhost",
+    port: 3306,
+    user: "root",
+    password: "password",
+    database: "moviesdb"
+  });
+}
 
 // Make connection.
 connection.connect(function (err) {
