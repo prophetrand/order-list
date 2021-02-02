@@ -5,5 +5,11 @@ var movie = {
 
     // create: ,
 
-    // update: ,
+    update: function(objColVals, condition, cb) {
+        orm.update("movies", objColVals, condition, function(res) {
+          cb(res);
+        });
+    }
 }
+
+module.exports = movie;

@@ -14,9 +14,20 @@ $(function() {
 
                 location.reload();
             }
-        )
+        );
     });
 
-    // POST method on the Form, find its class name.
+    $(".new-form").on("submit", function(event) {
+        event.preventDefault();
 
+        var newMovie = { name: $("#film").val().trim() };
+
+        $.ajax("/api/movies", {
+            type: "POST",
+            data: newMovie
+        }).then(function() {
+            console.log("New movie! Named: " + newMovie);
+            location.reload();
+        });
+    });
 });
