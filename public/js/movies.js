@@ -11,7 +11,6 @@ $(function() {
         }).then(
             function() {
                 console.log("changed watched status to", newStatus);
-
                 location.reload();
             }
         );
