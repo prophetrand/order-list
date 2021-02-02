@@ -17,5 +17,5 @@ var movie = {
       });
     }
 };
-
+// exporting for /controllers/movieControl.js to use
 module.exports = movie;

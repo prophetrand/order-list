@@ -72,5 +72,5 @@ var orm = {
         });
     }
 };
-
+// exporting for /models/movie.js to use
 module.exports = orm;
