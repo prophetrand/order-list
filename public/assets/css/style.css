@@ -1,8 +1,12 @@
+body {
+  background-color: lightsteelblue;
+}
+
 li {
-    padding: 5px;
-    margin: 5px;
-    background: #faebd7;
-  }
+  padding: 5px;
+  margin: 5px;
+  background: #faebd7;
+}
   
 .label {
   font-weight: bold;
