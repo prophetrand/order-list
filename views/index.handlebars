@@ -16,8 +16,8 @@
 <h2>Watched Movies</h2>
 
 <ul>
-  {{#each cats}}
-    {{#if sleepy}}
+  {{#each movies}}
+    {{#if watched}}
       {{> movie-block watched=false}}
     {{/if}}
   {{/each}}
@@ -31,5 +31,5 @@
     <input type="text" id="film" name="name">
   </div>
 
-  <button type="submit">Add Cat</button>
+  <button type="submit">Add Movie</button>
 </form>
