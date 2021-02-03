@@ -15,10 +15,8 @@ router.get("/", function(req, res) {
       
 router.post("/api/movies", function(req, res) {
     movie.create([
-        "title", "watched"
-    ], [
-        req.body.title, req.body.watched
-    ], function(result) {
+        "title"
+    ], [req.body.title], function(result) {
         // Send back the ID of the new movie
         res.json({ id: result.insertId });
     });

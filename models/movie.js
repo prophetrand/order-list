@@ -7,7 +7,7 @@ var movie = {
       });
     },
     create: function(cols, vals, cb) {
-      orm.create("cats", cols, vals, function(res) {
+      orm.create("movies", cols, vals, function(res) {
         cb(res);
       });
     },

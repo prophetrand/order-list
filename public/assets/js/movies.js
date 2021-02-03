@@ -19,7 +19,7 @@ $(function() {
     $(".new-form").on("submit", function(event) {
         event.preventDefault();
 
-        var newMovie = { name: $("#film").val().trim() };
+        var newMovie = { title: $("#film").val().trim() };
 
         $.ajax("/api/movies", {
             type: "POST",
