@@ -1,23 +1,75 @@
 body {
+  background-color: #f0f5f5;
+  font-family: 'Yusei Magic', sans-serif;
+  margin: 0;
+}
+
+h1 {
   background-color: lightsteelblue;
+  padding: 20px 40px;
+  margin: 0px;
+  width: 100%;
+  overflow: hidden;
+}
+
+h2 {
+  color:	#e9e2e9;
+}
+
+#graphic {
+  display: block;
+  margin: auto;
+  width: 15%;
+}
+
+ul {
+  list-style-type: none;
+}
+
+#list1, #list2 {
+  background-color: #363330;
+  border-radius: 15px;
+  width: 40%;
+  margin: 30px 50px;
+  padding: 15px;
+  float: left;
+}
+
+.change-watched {
+  float: inline-end;
+  font-style: italic;
+}
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
 }
 
 li {
   padding: 5px;
-  margin: 5px;
-  background: #faebd7;
+  margin: 7px 0px;
+  width: 80%;
+  background: lightsteelblue;
+  border-radius: 7px;
 }
 
-.change-watched {
-  font-style: italic;
+#adder {
+  text-align: center;
+  background-color: #737373;
+  margin: auto;
+  padding: 7px;
+  width: 20%;
+  border-radius: 15px;
 }
   
 label {
   font-weight: bolder;
+  color: #e9e2e9;
 }
 
 .create-update-form {
   padding: 5px;
   margin: 5px;
-  background: aqua;
+  background: lightsteelblue;
 }

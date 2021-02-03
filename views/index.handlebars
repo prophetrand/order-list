@@ -3,35 +3,41 @@
 
 <h1>Movie Time</h1>
 
-<img src="/assets/camera-edit.png" alt="movie camera clipart" width="250" height="250">
+<img id="graphic" src="/assets/camera-edit.png" alt="movie camera clipart">
 
-<h2>Movies to Watch</h2>
+<section class="clearfix">
+    <div id="list1">
+        <h2>Movies to Watch</h2>
+        <ul>
+        {{#each movies}}
+            {{#unless watched}}
+            {{> movie-block watched=true}}
+            {{/unless}}
+        {{/each}}
+        </ul>
+    </div>
 
-<ul>
-  {{#each movies}}
-    {{#unless watched}}
-      {{> movie-block watched=true}}
-    {{/unless}}
-  {{/each}}
-</ul>
+    <div id="list2">
+        <h2>Watched Movies</h2>
+        <ul>
+        {{#each movies}}
+            {{#if watched}}
+            {{> movie-block watched=false}}
+            {{/if}}
+        {{/each}}
+        </ul>
+    </div>
+</section>
 
-<h2>Watched Movies</h2>
+<section id="adder">
+    <h2>Add a Movie</h2>
+    <form class="new-form">
 
-<ul>
-  {{#each movies}}
-    {{#if watched}}
-      {{> movie-block watched=false}}
-    {{/if}}
-  {{/each}}
-</ul>
+    <div>
+        <label for="film">Movie Name:</label>
+        <input type="text" id="film">
+    </div>
 
-<h2>Add a Movie</h2>
-<form class="new-form">
-
-  <div>
-    <label for="film">Movie Name:</label>
-    <input type="text" id="film">
-  </div>
-
-  <button type="submit">Add Movie</button>
-</form>
+    <button type="submit">Add Movie</button>
+    </form>
+</section>
