@@ -1,2 +1,35 @@
 {{!-- <img src="/public/assets/camera.PNG" alt="movie camera clipart" width="250" height="250"> --}}
 {{!-- Camera clip art image above, find a home for it --}}
+
+<h1>Movie Time</h1>
+
+<h2>Movies to Watch</h2>
+
+<ul>
+  {{#each movies}}
+    {{#unless watched}}
+      {{> movie-block watched=true}}
+    {{/unless}}
+  {{/each}}
+</ul>
+
+<h2>Watched Movies</h2>
+
+<ul>
+  {{#each cats}}
+    {{#if sleepy}}
+      {{> movie-block watched=false}}
+    {{/if}}
+  {{/each}}
+</ul>
+
+<h2>Add a Movie</h2>
+<form class="new-form">
+
+  <div class="form-group">
+    <label for="film">Movie Name:</label>
+    <input type="text" id="film" name="name">
+  </div>
+
+  <button type="submit">Add Cat</button>
+</form>
